@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/temperature"
+        android:icon="@drawable/temperature_icon"
+        android:title="@string/temp_chart"
+        > </item>
+
+        <item
+            android:id="@+id/humidity"
+            android:icon="@drawable/humidity_icon"
+            android:title="@string/humidity_chart"></item>
+
+    <item
+        android:id="@+id/moisture"
+        android:icon="@drawable/ph_icon"
+        android:title="@string/pH_chart"
+        > </item>
+
+        <item
+            android:id="@+id/uv"
+            android:icon="@drawable/light_icon"
+            android:title="@string/light_chart"></item>
+
+        <item
+            android:id="@+id/co"
+            android:icon="@drawable/ph_icon"
+            android:title="@string/co_chart"></item>
+
+</group>
+    <item android:title="@string/about_us">
+
+        <menu>
+            <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/about_us"
+                android:icon="@drawable/aboutus_icon"
+                android:title="@string/about_us"
+                ></item>
+            <item
+                android:id="@+id/help"
+                android:icon="@drawable/help_icon"
+                android:title="@string/help"
+                ></item>
+            </group>
+        </menu>
+
+    </item>
+</menu>
