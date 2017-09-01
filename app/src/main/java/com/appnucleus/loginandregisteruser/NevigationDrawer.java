@@ -110,6 +110,8 @@ public class NevigationDrawer extends AppCompatActivity{
     private void firstuse() {
         SharedPreferences.Editor editor = someData.edit();
         editor.putString("SharedString", prod_id);
+        editor.putString("pumpstatus", "0");
+        editor.putString("number", "0");
         editor.commit();
     }
 
@@ -314,6 +316,15 @@ public class NevigationDrawer extends AppCompatActivity{
                         fragmentTransaction.replace(R.id.main_container, new Help());
                         fragmentTransaction.commit();
                         getSupportActionBar().setTitle(R.string.help);
+                        item.setChecked(true);
+                        drawerLayout.closeDrawers();
+                        break;
+
+                    case R.id.on_off:
+                        fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction.replace(R.id.main_container, new onoff_settings());
+                        fragmentTransaction.commit();
+                        getSupportActionBar().setTitle(R.string.on_off);
                         item.setChecked(true);
                         drawerLayout.closeDrawers();
                         break;
